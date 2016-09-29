@@ -23,4 +23,12 @@ router.post('/', function(req, res) {
   });
 });
 
+router.get('/:id', function(req, res) {
+  var product = new Product(req.body);
+  product.save().then(function (productInDB) {
+    res.json(productInDB);
+  });
+});
+
+
 module.exports = router;

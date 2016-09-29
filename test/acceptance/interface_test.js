@@ -70,6 +70,13 @@ describe('Express', function() {
 
           });
 
+          it('and display product price and expect it to be retrieve from the database', function() {
+              browser.get('/');
+              element(by.id('price')).getText().then(function(text) {
+                  expect(text).to.equal('Price');
+              });
+
+          });
 
 
     });

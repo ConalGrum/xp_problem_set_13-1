@@ -59,10 +59,8 @@ xhr.addEventListener('load', (e) => {
   var arrayProducts = e.target.response;
   console.log(e.target.response);
 for (var i = 0; i < arrayProducts.length; i++) {
-//  <a href="">Visit W3Schools.com!</a>
  var sHyperLink = "<a href=products/" + arrayProducts[i].id + ">" + arrayProducts[i].name + '</a>' + '<br>';
-  // document.getElementById('divProductLinkControl').innerHTML += "<a href='products/" + arrayProducts[i].id + "'>" + arrayProducts[i].name + '</a>' + '<br>';
-  document.getElementById('divProductLinkControl').innerHTML += sHyperLink; 
+  document.getElementById('divProductLinkControl').innerHTML += sHyperLink;
 }
 })
 
