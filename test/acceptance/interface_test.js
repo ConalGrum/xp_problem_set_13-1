@@ -58,7 +58,22 @@ describe('Express', function() {
                  expect(collection.attributes.description).to.equal('I must write tests before adding my description element');
               });
           });
+
+          it('and display production information hyper links and expect it to be retrieve from the database', function() {
+              browser.get('/');
+              element(by.tagName('h2')).getText().then(function(text) {
+                  expect(text).to.equal('Products List');
+              });
+              element(by.tagName('a')).getText().then(function(text) {
+                  expect(text).to.equal('George Marvel Medicine');
+              });
+
+          });
+
+
+
     });
+
 
 
   });

@@ -51,5 +51,17 @@ window.onload = function() {
         ));
   };
 
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "/products");
+xhr.responseType = 'json';
 
+xhr.addEventListener('load', (e) => {
+  var arrayProducts = e.target.response;
+  console.log(e.target.response);
+for (var i = 0; i < arrayProducts.length; i++) {
+  document.getElementById('divProductLinkControl').innerHTML += arrayProducts[i].name + '<br>';
+}
+})
+
+xhr.send();
 }
