@@ -61,7 +61,7 @@ window.onload = function() {
                 name: document.getElementById("txtProductName").value,
                 price: document.getElementById("txtPrice").value,
                 description: document.getElementById("txtDescription").value,
-                categories: result
+                //categories: result
             }));
     };
 

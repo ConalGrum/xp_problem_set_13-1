@@ -44,19 +44,19 @@ describe('Express', function() {
         });
 
         it('and enter new product information and expect it to be retrieve from the database', function() {
-            category.save({
-                name: "garden"
-            }, {
-                name: "home"
-            }, {
-                name: "vehicle"
-            })
+            // Category.save({
+            //     name: "garden"
+            // }, {
+            //     name: "home"
+            // }, {
+            //     name: "vehicle"
+            // })
 
             browser.get('/');
             element(by.id('txtProductName')).sendKeys('Random Product Name');
             element(by.id('txtPrice')).sendKeys('180.0');
             element(by.id('txtDescription')).sendKeys('I must write tests before adding my description element');
-            element(by.id('garden')).click();
+            //element(by.id('garden')).click();
             element(by.id('btnProductSubmit')).click();
 
             Product.forge({
@@ -65,31 +65,10 @@ describe('Express', function() {
                 expect(collection.attributes.name).to.equal('Random Product Name');
                 expect(collection.attributes.price).to.equal(180.0);
                 expect(collection.attributes.description).to.equal('I must write tests before adding my description element');
-                expect(collection.attributes.categories).to.equal();
+                //expect(collection.attributes.categories).to.equal();
             });
         });
     });
-
-
-});
-rite tests before adding my description element ');
-});
-});
-});
-
-
-});
-rite tests before adding my description element ');
-});
-});
-});
-
-
-});
-rite tests before adding my description element ');
-});
-});
-});
 
 
 });
