@@ -31,34 +31,65 @@ describe('Express', function() {
 
         });
 
-          it('and enter new category information and expect it to be retrieve from the database', function() {
-              browser.get('/');
-              element(by.id('txtCategoryName')).sendKeys('Google is my friend Category');
-              element(by.id('btnCategorySubmit')).click();
+        it('and enter new category information and expect it to be retrieve from the database', function() {
+            browser.get('/');
+            element(by.id('txtCategoryName')).sendKeys('Google is my friend Category');
+            element(by.id('btnCategorySubmit')).click();
 
-              Category.forge({name: 'Google is my friend Category'}).fetch().then(function (collection) {
-                 expect(collection.attributes.name).to.equal('Google is my friend Category');
-              });
-          });
+            Category.forge({
+                name: 'Google is my friend Category'
+            }).fetch().then(function(collection) {
+                expect(collection.attributes.name).to.equal('Google is my friend Category');
+            });
+        });
 
-          it('and enter new product information and expect it to be retrieve from the database', function() {
-              browser.get('/');
-              element(by.id('txtProductName')).sendKeys('Random Product Name');
-              element(by.id('txtPrice')).sendKeys('180.0');
-              element(by.id('txtDescription')).sendKeys('I must write tests before adding my description element');
-              element(by.id('chkBoxCategory')).click;
-              element(by.id('btnProductSubmit')).click();
+        it('and enter new product information and expect it to be retrieve from the database', function() {
+            category.save({
+                name: "garden"
+            }, {
+                name: "home"
+            }, {
+                name: "vehicle"
+            })
 
-              Product.forge({name: 'Random Product Name'}).fetch().then(function (collection) {
-                 expect(collection.attributes.name).to.equal('Random Product Name');
+            browser.get('/');
+            element(by.id('txtProductName')).sendKeys('Random Product Name');
+            element(by.id('txtPrice')).sendKeys('180.0');
+            element(by.id('txtDescription')).sendKeys('I must write tests before adding my description element');
+            element(by.id('garden')).click();
+            element(by.id('btnProductSubmit')).click();
 
-                 //this is being returned from db as a float, need to do a convert
-                 expect(collection.attributes.price).to.equal(180.0);
-
-                 expect(collection.attributes.description).to.equal('I must write tests before adding my description element');
-              });
-          });
+            Product.forge({
+                name: 'Random Product Name'
+            }).fetch().then(function(collection) {
+                expect(collection.attributes.name).to.equal('Random Product Name');
+                expect(collection.attributes.price).to.equal(180.0);
+                expect(collection.attributes.description).to.equal('I must write tests before adding my description element');
+                expect(collection.attributes.categories).to.equal();
+            });
+        });
     });
 
 
-  });
+});
+rite tests before adding my description element ');
+});
+});
+});
+
+
+});
+rite tests before adding my description element ');
+});
+});
+});
+
+
+});
+rite tests before adding my description element ');
+});
+});
+});
+
+
+});

@@ -11,6 +11,7 @@
     "body-parser": "~1.15.1",
     "bookshelf": "^0.10.2",
     "cfenv": "^1.0.3",
+    "chromedriver": "^2.24.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.13.4",
@@ -22,6 +23,7 @@
     "nodemon": "^1.10.2",
     "protractor": "^4.0.9",
     "serve-favicon": "~2.3.0",
+    "webdriver": "0.0.1",
     "webdriver-manager": "^10.2.3"
   },
   "devDependencies": {
