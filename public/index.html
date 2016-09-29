@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<script src="./js/event.js"></script>
+
+<head>
+  <title>Products and Categories</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+</head>
+
+<body>
+  <h1 id="h1ref">Products and Categories</h1>
+
+  <!--form name="newCategory" method="POST" action="/categories"-->
+      <h3 id="category">New Category Form</h3>
+
+
+      <p>
+          <label for="name"/> Name
+          <input type="text" id="txtCategoryName" name="name" value="" required/>
+      </p>
+      <p>
+          <!--<input type="button" style="float: right;"  id="btnCategorySubmit"  name="Create Category"/>-->
+          <input type="button" value="Create Category" id="btnCategorySubmit"/>
+      </p>
+      <p>
+          <br /> <br />
+          <h3 id="product">New Product Form</h3>
+          <br />
+
+          <label for="name"/> Product Name
+          <input type="text" id="txtProductName" value="" required/>
+
+          <label for="name"/> Price
+          <input type="text" id="txtPrice"  value="" required/>
+
+          <label for="name"/> Description
+          <input type="text" id="txtDescription" value="" required/>
+
+          <!--input type="checkbox" name="vehicle" value="Bike"> I have a bike<br-->
+
+          <input type="button" value="Create Product" id="btnProductSubmit"/>
+      </p>
+
+
+  <!--/form> -->
+
+
+
+  <!--/form-->
+
+</body>
+
+</html>
